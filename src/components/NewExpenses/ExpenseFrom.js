@@ -47,7 +47,7 @@ const ExpenseFrom = (props) => {
             </div>
             <div className="new-expense__control">
                 <label>Amount</label>
-                <input type="number" value={ enteredAmount } min="0.01" steps="0.01" onChange={onChangeAmount}/>
+                <input type="number" value={ enteredAmount } min="0.01" steps="1" onChange={onChangeAmount}/>
             </div>
             <div className="new-expense__control">
                 <label>Date</label>

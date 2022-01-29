@@ -15,7 +15,7 @@ const Expenses = ({items}) => {
               title={ item.title }
               amount={ item.amount } />
           )
-        };
+        }
       
       </Card>
   );
