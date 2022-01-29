@@ -1,23 +1,42 @@
-import logo from './logo.svg';
 import './App.css';
 
+import React from 'react';
+
+import Expenses from './components/Expenses-comps/Expenses'
+
 function App() {
+
+  let expenses = [
+    {
+      id: 1,
+      title: 'Travel Tickets',
+      amount: '700',
+      date: new Date(2022, 1, 15)
+    },
+    {
+      id: 2,
+      title: 'Hotel Suite Booking',
+      amount: '2500',
+      date: new Date(2022, 1, 16)
+    },
+    {
+      id: 3,
+      title: 'Entry Fees',
+      amount: '1200',
+      date: new Date(2022, 1, 17)
+    }
+  ]
+  
+
+  const appName ="TZ's Expense Manager";
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h2>{appName}</h2>
+
+      <Expenses items={expenses} />
+
+      
     </div>
   );
 }
